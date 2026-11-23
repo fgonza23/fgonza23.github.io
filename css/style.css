@@ -316,6 +316,7 @@ nav ul li a {
 
 #about .about-descr .separator {
   max-width: 80%;
+  color: #444444;
   margin-bottom: 0;
   text-align: left;
 }
