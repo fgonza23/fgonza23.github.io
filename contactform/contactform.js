@@ -89,29 +89,23 @@ jQuery(document).ready(function($) {
       }
     });
     if (ferror) return false;
-    else var str = $(this).serialize();
-    var action = $(this).attr('action');
-    if( ! action ) {
-      action = 'contactform/contactform.php';
-    }
-    $.ajax({
-      type: "POST",
-      url: action,
-      data: str,
-      success: function(msg) {
-        // alert(msg);
-        if (msg == 'OK') {
-          $("#sendmessage").addClass("show");
-          $("#errormessage").removeClass("show");
-          $('.contactForm').find("input, textarea").val("");
-        } else {
-          $("#sendmessage").removeClass("show");
-          $("#errormessage").addClass("show");
-          $('#errormessage').html(msg);
-        }
 
-      }
-    });
+    // GitHub Pages is static hosting and cannot run PHP, so instead of POSTing
+    // to a server we open the visitor's email client with the message pre-filled.
+    var form = $(this);
+    var to = (form.attr('action') || '').replace(/^mailto:/, '');
+    var name = form.find('[name="name"]').val();
+    var email = form.find('[name="email"]').val();
+    var subject = form.find('[name="subject"]').val();
+    var message = form.find('[name="message"]').val();
+    var body = message + '\n\n— ' + name + ' (' + email + ')';
+
+    window.location.href = 'mailto:' + to +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+
+    $("#errormessage").removeClass("show");
+    $("#sendmessage").text("Your email app should open with the message ready to send.").addClass("show");
     return false;
   });
 
