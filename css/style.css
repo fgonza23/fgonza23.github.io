@@ -316,7 +316,7 @@ nav ul li a {
 
 #about .about-descr .separator {
   max-width: 80%;
-  color: #3e2f22;
+  color: #000000;
   margin-bottom: 0;
   text-align: left;
 }
@@ -453,7 +453,7 @@ nav ul li a {
 /*  Journal
 /*-----------------------------------------------------------------------------------*/
 
-#journal,  #journal-blog {
+#hobbies,  #journal-blog {
   height: auto;
   width: 100%;
   background: #f7f7f7;
@@ -466,13 +466,13 @@ nav ul li a {
   padding-bottom: 30px;
 }
 
-#journal .journal-block {
+#hobbies .journal-block {
   display: inline-block;
   height: auto;
   width: 100%;
 }
 
-#journal .journal-block .journal-info {
+#hobbies .journal-block .journal-info {
   position: relative;
 }
 
