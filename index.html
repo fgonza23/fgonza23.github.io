@@ -2,66 +2,47 @@
 <html lang="en">
 
 <head>
-  <!-- meta -->
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Francisco Gonzalez's personal webpage</title>
-  <meta content="Francisco Gonzalez, software developer, Chicago, Ruby on Rails, JavaScript, Vue.js, Python" name="keywords">
-  <meta content="Francisco Gonzalez – Chicago-based technical problem solver specializing in escalated technical support, AI tools, and Ruby on Rails." name="description">
+  <title>Francisco Gonzalez</title>
+  <meta name="description" content="Francisco Gonzalez – Chicago-based technical problem solver specializing in escalated technical support, AI tools, and Ruby on Rails.">
 
-  <!-- Google Fonts -->
+  <link rel="icon" href="images/favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Playfair+Display:400&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/hover/hover.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
-  <!-- Responsive css -->
   <link href="css/responsive.css" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.png">
-
 </head>
+
 <body>
 
-  <!-- start section navbar -->
+  <!-- Navbar (slides in after scrolling past the header) -->
   <nav id="main-nav">
-    <div class="row">
-      <div class="container">
-
-        <div class="logo">
-          <a href="index.html"><img src="images/favicon.png" alt="Francisco Gonzalez logo"></a>
-        </div>
-
-        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
-
-        <ul class="nav-menu list-unstyled">
-          <li><a href="#header" class="smoothScroll">Home</a></li>
-          <li><a href="#about" class="smoothScroll">About</a></li>
-          <li><a href="#hobbies" class="smoothScroll">Hobbies</a></li>
-          <li><a href="#contact" class="smoothScroll">Contact</a></li>
-        </ul>
-
+    <div class="container">
+      <div class="logo">
+        <a href="#header"><img src="images/favicon.png" alt="Francisco Gonzalez"></a>
       </div>
+
+      <button type="button" class="responsive" aria-label="Toggle menu"><i class="ion-navicon-round"></i></button>
+
+      <ul class="nav-menu list-unstyled">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
-  <!-- End section navbar -->
 
-
-  <!-- start section header -->
-  <div id="header" class="home">
-
+  <!-- Header -->
+  <header id="header">
     <div class="container">
       <div class="header-content">
         <h1>I'm <span class="typed"></span></h1>
@@ -69,280 +50,189 @@
 
         <ul class="list-unstyled list-social">
           <li><a href="https://github.com/fgonza23" target="_blank" rel="noopener" aria-label="GitHub"><i class="ion-social-github"></i></a></li>
-          <!-- <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-          <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-          <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
- -->      <li><a href="https://www.linkedin.com/in/francisco-gonzalez-0906" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ion-social-linkedin"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/francisco-gonzalez-0906" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ion-social-linkedin"></i></a></li>
         </ul>
       </div>
     </div>
-  </div>
-  <!-- End section header -->
+  </header>
 
+  <main>
 
-  <!-- start section about us -->
-  <div id="about" class="paddsection">
-    <div class="container">
-      <div class="row justify-content-between">
+    <!-- About -->
+    <section id="about" class="paddsection">
+      <div class="container">
+        <div class="row justify-content-between">
 
-        <div class="col-lg-4 ">
-          <div class="div-img-bg">
-            <div class="about-img">
-              <img src="images/profile.jpg" class="img-responsive" alt="Francisco Gonzalez" loading="lazy">
+          <div class="col-lg-4">
+            <div class="div-img-bg">
+              <div class="about-img">
+                <img src="images/profile.jpg" alt="Francisco Gonzalez" loading="lazy">
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-lg-7">
-          <div class="about-descr">
-
-            <p class="p-heading">I’m a technical problem solver who likes making technology easier to use and understand.</p>
-            <p class="separator" style="margin-bottom: 1rem;">Whatever the problem, my goal is the same: find out what’s really going on and make sure the person walks away understanding it. I can also walk people through technical issues in Spanish.</p>
-            <p class="separator" style="margin-bottom: 1rem;">My career started in the field, supporting Google and Oculus products. Training account teams on new technology and keeping live displays running taught me to solve problems fast and explain them clearly. Seeing how those companies build products made me want to build too, so I went through a full stack bootcamp and a Rails and React apprenticeship. Now I specialize in escalated technical support, where I can help someone at the user level and still understand the systems underneath.</p>
-            <p class="separator" style="margin-bottom: 1rem;">AI has become a big part of how I work. I use it every day to dig into problems faster and think more clearly, and I’m building my own apps and tools with it, including ones that automate research and analysis. I’m most interested in taking something complicated and making it practical for people who aren’t technical.</p>
-            <p class="separator" style="margin-bottom: 1rem;">I’m a Chapter Director at Techqueria Chicago, a nonprofit supporting Latino professionals in tech, and I’m passionate about helping others grow in this field. I help keep the chapter running, but what I enjoy most is watching people find a space where they belong and make connections that move their careers forward. I also contribute to the Chicago Tool Library’s open source Ruby on Rails app.</p>
-            <p class="separator" style="margin-bottom: 1rem;">If you’re working on something interesting, or hiring for technical support or platform roles, I’d like to hear from you.</p>
-
+          <div class="col-lg-7">
+            <div class="about-descr">
+              <p class="p-heading">I’m a technical problem solver who likes making technology easier to use and understand.</p>
+              <p class="separator">Whatever the problem, my goal is the same: find out what’s really going on and make sure the person walks away understanding it. I can also walk people through technical issues in Spanish.</p>
+              <p class="separator">My career started in the field, supporting Google and Oculus products. Training account teams on new technology and keeping live displays running taught me to solve problems fast and explain them clearly. Seeing how those companies build products made me want to build too, so I went through a full stack bootcamp and a Rails and React apprenticeship. Now I specialize in escalated technical support, where I can help someone at the user level and still understand the systems underneath.</p>
+              <p class="separator">AI has become a big part of how I work. I use it every day to dig into problems faster and think more clearly, and I’m building my own apps and tools with it, including ones that automate research and analysis. I’m most interested in taking something complicated and making it practical for people who aren’t technical.</p>
+              <p class="separator">I’m a Chapter Director at Techqueria Chicago, a nonprofit supporting Latino professionals in tech, and I’m passionate about helping others grow in this field. I help keep the chapter running, but what I enjoy most is watching people find a space where they belong and make connections that move their careers forward. I also contribute to the Chicago Tool Library’s open source Ruby on Rails app.</p>
+              <p class="separator">If you’re working on something interesting, or hiring for technical support or platform roles, I’d like to hear from you.</p>
+            </div>
           </div>
 
         </div>
       </div>
-    </div>
-  </div>
-  <!-- end section about us -->
+    </section>
 
-
-  <!-- start section services -->
-  <div id="services">
-    <div class="container">
-
-        <div class="services-carousel owl-theme">
+    <!-- Skills carousel -->
+    <section id="services">
+      <div class="container">
+        <div class="services-carousel">
 
           <div class="services-block">
-
             <i class="ion-ios-gear-outline"></i>
             <span>TECHNICAL SUPPORT</span>
             <p class="separator">Escalated support across platforms and systems, from authentication and access to devices and data issues. I find the root cause and explain the fix clearly, in English or Spanish.</p>
-
           </div>
 
           <div class="services-block">
-
             <i class="ion-code"></i>
             <span>FULL STACK DEVELOPMENT</span>
             <p class="separator">Building web applications with Ruby on Rails, React, JavaScript, and SQL, and integrating RESTful APIs.</p>
-
           </div>
 
           <div class="services-block">
-
             <i class="ion-ios-lightbulb-outline"></i>
             <span>AI AND AUTOMATION</span>
             <p class="separator">Building apps and tools with AI models and APIs, including ones that automate research and analysis.</p>
-
           </div>
 
           <div class="services-block">
-
             <i class="ion-ios-people-outline"></i>
             <span>TEAM COLLABORATION</span>
             <p class="separator">Worked between departments, retail partners, and technical teams to deliver projects and resolve issues on time.</p>
-
           </div>
 
           <div class="services-block">
-
             <i class="ion-ios-world-outline"></i>
             <span>COMMUNITY LEADERSHIP</span>
             <p class="separator">Chapter Director at Techqueria Chicago, coordinating events, volunteers, and partnerships for Latino professionals in tech.</p>
-
           </div>
 
         </div>
-
-    </div>
-
-  </div>
-  <!-- end section services -->
-
-
-
-
-  <!-- start section hobbies -->
-  <div id="hobbies" class="text-left paddsection">
-
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>HOBBIES</h2>
       </div>
-    </div>
+    </section>
 
-    <div class="container">
-      <div class="journal-block">
+    <!-- Hobbies -->
+    <section id="hobbies" class="paddsection">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>HOBBIES</h2>
+        </div>
+
         <div class="row">
 
           <div class="col-lg-4 col-md-6">
-            <div class="journal-info">
-
-              <img src="images/IMG_20180528_123620.jpg" class="img-responsive" alt="Traveling" loading="lazy">
-
-              <div class="journal-txt">
-
-                <h4><a>IT FEELS GOOD TO BE LOST IN THE RIGHT DIRECTION</a></h4>
-                <p class="separator">Traveling is one of my biggest passions. I try to travel to a new place every year. I like to submerge myself in the culture and have new experiences.
-                </p>
-
+            <div class="hobby">
+              <img src="images/hobby-travel.jpg" alt="Traveling" loading="lazy">
+              <div class="hobby-txt">
+                <h4>IT FEELS GOOD TO BE LOST IN THE RIGHT DIRECTION</h4>
+                <p>Traveling is one of my biggest passions. I try to travel to a new place every year. I like to submerge myself in the culture and have new experiences.</p>
               </div>
-
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="journal-info">
-
-              <img src="images/IMG_20180204_121503.jpg" class="img-responsive" alt="Outdoor adventure" loading="lazy">
-
-              <div class="journal-txt">
-
-                <h4><a>LIVE LIFE TO THE FULLEST</a></h4>
-                <p class="separator">I try to be open minded about new concepts or activities. I will always try something at least once. I enjoy a lot of outdoor activities and don't shy away from a little risk.
-                </p>
-
+            <div class="hobby">
+              <img src="images/hobby-outdoors.jpg" alt="Outdoor adventure" loading="lazy">
+              <div class="hobby-txt">
+                <h4>LIVE LIFE TO THE FULLEST</h4>
+                <p>I try to be open minded about new concepts or activities. I will always try something at least once. I enjoy a lot of outdoor activities and don't shy away from a little risk.</p>
               </div>
-
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
-            <div class="journal-info">
-
-              <img src="images/IMG_20190110_183430.jpg" class="img-responsive" alt="Team projects" loading="lazy">
-
-              <div class="journal-txt">
-
-                <h4><a>FUN PROJECTS</a></h4>
-                <p class="separator">I enjoy working on team projects when I have free time. Working in a team lets me bring out my creative side. This also lets me explore possibilities that I may have not thought of if working alone.
-                </p>
-
+            <div class="hobby">
+              <img src="images/hobby-projects.jpg" alt="Team projects" loading="lazy">
+              <div class="hobby-txt">
+                <h4>FUN PROJECTS</h4>
+                <p>I enjoy working on team projects when I have free time. Working in a team lets me bring out my creative side. This also lets me explore possibilities that I may have not thought of if working alone.</p>
               </div>
-
             </div>
           </div>
 
         </div>
       </div>
-    </div>
+    </section>
 
-  </div>
-  <!-- End section hobbies -->
-
-
-  <!-- start sectoion contact -->
-  <div id="contact" class="paddsection">
-    <div class="container">
-      <div class="contact-block1">
+    <!-- Contact -->
+    <section id="contact" class="paddsection">
+      <div class="container">
         <div class="row">
 
           <div class="col-lg-6">
             <div class="contact-contact">
-
               <h2 class="mb-30">GET IN TOUCH</h2>
-
               <ul class="contact-details">
-                                <li><span>Chicago, IL</span></li>
-                <li><span><a href="mailto:francisco.gonz0906@gmail.com">francisco.gonz0906@gmail.com</a></span></li>
+                <li>Chicago, IL</li>
+                <li><a href="mailto:francisco.gonz0906@gmail.com">francisco.gonz0906@gmail.com</a></li>
               </ul>
-
             </div>
           </div>
 
           <div class="col-lg-6">
-            <form action="https://formsubmit.co/ajax/francisco.gonz0906@gmail.com" method="post" role="form" class="contactForm">
-              <input type="hidden" name="_template" value="table">
-              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <!-- Sent via FormSubmit (formsubmit.co); GitHub Pages can't run server code. -->
+            <form action="https://formsubmit.co/ajax/francisco.gonz0906@gmail.com" method="post" class="contact-form">
+              <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <div id="sendmessage" role="status" aria-live="polite"></div>
+              <div id="errormessage" role="alert"></div>
+
               <div class="row">
-
-                <div id="sendmessage" role="status" aria-live="polite"></div>
-                <div id="errormessage" role="alert"></div>
-
                 <div class="col-lg-6">
-                  <div class="form-group contact-block1">
-                    <input type="text" name="name" class="form-control" id="name" aria-label="Your name" required placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                  </div>
+                  <input type="text" name="name" class="form-control" aria-label="Your name" placeholder="Your Name" required minlength="2">
                 </div>
-
                 <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" aria-label="Your email" required placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
-                  </div>
+                  <input type="email" name="email" class="form-control" aria-label="Your email" placeholder="Your Email" required>
                 </div>
-
                 <div class="col-lg-12">
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" aria-label="Subject" required placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 4 chars of subject" />
-                    <div class="validation"></div>
-                  </div>
+                  <input type="text" name="subject" class="form-control" aria-label="Subject" placeholder="Subject" required>
                 </div>
-
                 <div class="col-lg-12">
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" aria-label="Message" required rows="12" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validation"></div>
-                  </div>
+                  <textarea name="message" class="form-control" rows="12" aria-label="Message" placeholder="Message" required></textarea>
                 </div>
-
                 <div class="col-lg-12">
-                  <input type="submit" class="btn btn-default btn-send" value="Send message">
+                  <button type="submit" class="btn btn-send">Send message</button>
                   <p class="small mt-2">Prefer email? Reach me directly at <a href="mailto:francisco.gonz0906@gmail.com">francisco.gonz0906@gmail.com</a>.</p>
                 </div>
-
               </div>
             </form>
           </div>
+
         </div>
       </div>
-    </div>
-  </div>
-  <!-- start sectoion contact -->
+    </section>
 
+  </main>
 
-  <!-- start section footer -->
-  <div id="footer" class="text-center">
+  <!-- Footer -->
+  <footer id="footer" class="text-center">
     <div class="container">
-      <div class="socials-media text-center">
-
-        <ul class="list-unstyled">
-          <li><a href="https://github.com/fgonza23" target="_blank" rel="noopener" aria-label="GitHub"><i class="ion-social-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/francisco-gonzalez-0906" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ion-social-linkedin"></i></a></li>
-         <!--  <li><a href="#"><i class="ion-social-instagram"></i></a></li>
-          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-          <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
-          <li><a href="#"><i class="ion-social-dribbble"></i></a></li> -->
-        </ul>
-
-      </div>
-
-     <p>&copy; Francisco Gonzalez. All rights reserved.</p>
-
-
+      <ul class="list-unstyled socials-media">
+        <li><a href="https://github.com/fgonza23" target="_blank" rel="noopener" aria-label="GitHub"><i class="ion-social-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/francisco-gonzalez-0906" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ion-social-linkedin"></i></a></li>
+      </ul>
+      <p>&copy; Francisco Gonzalez</p>
     </div>
-  </div>
-  <!-- End section footer -->
+  </footer>
 
-  <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/typed/typed.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
+  <script src="js/contact.js"></script>
   <script src="js/main.js"></script>
 
 </body>
