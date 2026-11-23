@@ -90,22 +90,52 @@ jQuery(document).ready(function($) {
     });
     if (ferror) return false;
 
-    // GitHub Pages is static hosting and cannot run PHP, so instead of POSTing
-    // to a server we open the visitor's email client with the message pre-filled.
+    // GitHub Pages can't run server code, so messages are relayed by
+    // FormSubmit (https://formsubmit.co), which emails them to the address
+    // in the form's action URL.
     var form = $(this);
-    var to = (form.attr('action') || '').replace(/^mailto:/, '');
-    var name = form.find('[name="name"]').val();
-    var email = form.find('[name="email"]').val();
+    var btn = form.find('.btn-send');
+    var to = 'francisco.gonz0906@gmail.com';
     var subject = form.find('[name="subject"]').val();
     var message = form.find('[name="message"]').val();
-    var body = message + '\n\n— ' + name + ' (' + email + ')';
+    var name = form.find('[name="name"]').val();
+    var email = form.find('[name="email"]').val();
+    var data = {
+      name: name,
+      email: email,
+      _replyto: email,
+      _subject: 'Website contact: ' + subject,
+      message: message,
+      _template: 'table',
+      _honey: form.find('[name="_honey"]').val()
+    };
 
-    window.location.href = 'mailto:' + to +
-      '?subject=' + encodeURIComponent(subject) +
-      '&body=' + encodeURIComponent(body);
+    function fail() {
+      $("#sendmessage").removeClass("show");
+      $("#errormessage").html('Sorry, the message could not be sent. Please email me at <a href="mailto:' + to +
+        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message) + '">' + to + '</a>.').addClass("show");
+    }
 
-    $("#errormessage").removeClass("show");
-    $("#sendmessage").text("Your email app should open with the message ready to send.").addClass("show");
+    btn.prop('disabled', true).val('Sending...');
+    $.ajax({
+      type: "POST",
+      url: form.attr('action'),
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      dataType: "json",
+      headers: { Accept: "application/json" },
+      success: function(res) {
+        if (res && (res.success === true || res.success === "true")) {
+          $("#errormessage").removeClass("show");
+          $("#sendmessage").text("Your message has been sent. Thank you!").addClass("show");
+          form.find("input[type=text], input[type=email], textarea").val("");
+        } else {
+          fail();
+        }
+      },
+      error: fail,
+      complete: function() { btn.prop('disabled', false).val('Send message'); }
+    });
     return false;
   });
 
